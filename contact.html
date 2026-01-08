@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Path Visa Advisor</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="mainHeader">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Path Visa Advisor">
+                <span>PATH VISA ADVISOR</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="countries.html">Countries</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-cta">Apply Now</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close Menu">&times;</button>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="countries.html">Countries</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section class="hero" style="padding-bottom: 20px; min-height: auto;">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h1 style="color: var(--primary); font-size: 3.5rem;">Get In Touch</h1>
+                    <p>Start your global journey today with an expert consultation from <br><br><strong><b>Sandhya Patel
+                            </b></strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--gray-light);">
+            <div class="container">
+                <div class="contact-container reveal">
+                    <form id="contactForm" action="https://formspree.io/f/xjgknpjo" method="POST">
+                        <input type="hidden" name="_next" value="https://path-visa-website.vercel.app/thankyou.html">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Required Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="student">Student Visa</option>
+                                <option value="work">Work Visa</option>
+                                <option value="tourist">Tourist Visa</option>
+                                <option value="business">Business Visa</option>
+                                <option value="passport">Passport Services</option>
+                                <option value="tour">Tour packages visa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Target Country</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select a country</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                                <option value="uk">UK</option>
+                                <option value="australia">Australia</option>
+                                <option value="europe">Europe</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us about your requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                    </form>
+                    <div id="successMessage" style="display: none; text-align: center; padding: 40px;">
+                        <div style="font-size: 4rem; color: #10B981; margin-bottom: 20px;">✓</div>
+                        <h3 style="color: var(--primary); margin-bottom: 15px;">Inquiry Sent Successfully!</h3>
+                        <p style="color: var(--text-muted);">Thank you for reaching out. An expert consultant will
+                            contact you within 24 hours to discuss your path.</p>
+                        <div style="margin-top: 30px;">
+                            <a href="index.html" class="btn btn-outline">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding-top: 60px;">
+            <div class="container reveal">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="font-size: 2.2rem; color: var(--primary);">Direct Consultation</h2>
+                    <p style="color: var(--text-muted);">Connect personally with our owner and lead expert.</p>
+                </div>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; text-align: center;">
+                    <div class="card">
+                        <div style="color: var(--primary); margin-bottom: 15px;">
+                            <svg class="svg-icon" style="width: 40px; height: 40px;" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h4 style="font-size: 1.4rem;">Sandhya Patel</h4>
+                        <p style="font-weight: 600; color: var(--primary); margin-bottom: 15px;">Owner & Lead Consultant
+                        </p>
+                        <p>Certified Immigration Expert with 10+ years of experience.</p>
+                    </div>
+                    <div class="card">
+                        <div style="color: var(--primary); margin-bottom: 15px;">
+                            <svg class="svg-icon" style="width: 40px; height: 40px;" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4>Quick Connect</h4>
+                        <p style="margin-bottom: 10px;"><strong>Phone:</strong> +91 85116 66923</p>
+                        <p><strong>Email:</strong> pathvisaadvisor@gmail.com</p>
+                    </div>
+                    <div class="card">
+                        <div style="color: var(--primary); margin-bottom: 15px;">
+                            <svg class="svg-icon" style="width: 40px; height: 40px;" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h4>Visit Us</h4>
+                        <p>Shayona Shikhar, Gota, Ahmedabad- 382481, Gujarat, India</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company Info</h4>
+                    <p>Path Visa Advisor is a premier global immigration consultancy lead by <strong>Sandhya
+                            Patel</strong>, providing world-class services
+                        with integrity and excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="countries.html">Countries</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info footer-links">
+                        <li><svg class="svg-icon" style="margin-right: 10px;" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg> Shayona Shikhar, Gota, Ahmedabad- 382481, Gujarat, India</li>
+                        <li><svg class="svg-icon" style="margin-right: 10px;" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg> +91 85116 66923</li>
+                        <li><svg class="svg-icon" style="margin-right: 10px;" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg> pathvisaadvisor@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Path Visa Advisor | Lead Consultant: Sandhya Patel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

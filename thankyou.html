@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Path Visa Advisor</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        .thankyou-section {
+            padding: 150px 0;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thankyou-card {
+            background: var(--white);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(10, 31, 68, 0.1);
+            max-width: 600px;
+            width: 100%;
+            border: 1px solid var(--gray-border);
+        }
+
+        .thankyou-icon {
+            width: 80px;
+            height: 80px;
+            background: #10B981;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 3rem;
+            animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+
+            70% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .thankyou-card h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .thankyou-card p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Path Visa Advisor Logo">
+                <span>PATH VISA ADVISOR</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="countries.html">Countries</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-cta">Apply Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="thankyou-section">
+            <div class="container">
+                <div class="thankyou-card reveal">
+                    <div class="thankyou-icon">✓</div>
+                    <h1>Thank You!</h1>
+                    <p>Thank you for connecting with us. Your inquiry has been received successfully. Our expert agent
+                        will review your profile and reply to you very soon. <br><br>Stay touched with <strong>Path Visa
+                            Advisor</strong>.</p>
+                    <div style="display: flex; gap: 20px; justify-content: center;">
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                        <a href="services.html" class="btn btn-outline">Explore Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company Info</h4>
+                    <p>Path Visa Advisor is a premier global immigration consultancy lead by <strong>Sandhya
+                            Patel</strong>. We
+                        provide world-class services with integrity and excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="countries.html">Countries</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info footer-links">
+                        <li>Shayona Shikhar, Gota, Ahmedabad- 382481</li>
+                        <li>+91 85116 66923</li>
+                        <li>pathvisaadvisor@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Path Visa Advisor. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
