@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     contactForm.style.transition = 'all 0.4s ease';
 
                     setTimeout(() => {
-                        window.location.href = "thankyou.html";
+                        window.location.href = "/thankyou";
                     }, 400);
                 } else {
                     const data = await response.json();
