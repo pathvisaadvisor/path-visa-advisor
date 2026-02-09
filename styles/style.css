@@ -363,7 +363,7 @@ section {
 /* Countries Flags */
 .country-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -694,6 +694,10 @@ footer {
     }
 
     .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .country-grid {
         grid-template-columns: 1fr;
     }
 
