@@ -375,13 +375,18 @@ section {
     transition: var(--transition);
 }
 
+.country-card p {
+    color: var(--text-muted);
+}
+
 .country-card:hover {
     background: var(--primary);
     border-color: var(--primary);
 }
 
 .country-card:hover h3,
-.country-card:hover p {
+.country-card:hover p,
+.country-card:hover .flag-icon {
     color: var(--white);
 }
 
