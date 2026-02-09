@@ -312,88 +312,6 @@ section {
     overflow: hidden;
 }
 
-.service-card {
-    min-height: 300px;
-    display: flex;
-    align-items: flex-end;
-    padding: 30px;
-    background-size: cover;
-    background-position: center;
-    border: none;
-    position: relative;
-    z-index: 1;
-    background-color: #0F172A;
-    /* Fallback for when images don't load */
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.2) 100%);
-    z-index: 1;
-    transition: var(--transition);
-}
-
-.service-card:hover::before {
-    background: linear-gradient(to top, rgba(30, 58, 138, 0.98), rgba(30, 58, 138, 0.6));
-}
-
-
-
-.card-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-}
-
-.service-card h3 {
-    color: var(--white);
-    margin-bottom: 10px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.service-card p {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 0;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-.service-student {
-    background-image: url('https://images.unsplash.com/photo-1523050853063-bd141c2da09b?auto=format&fit=crop&q=80&w=800');
-}
-
-.service-tourist {
-    background-image: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80&w=800');
-}
-
-.service-work {
-    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800');
-}
-
-.service-business {
-    background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800');
-}
-
-.service-tour {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800');
-}
-
-.service-passport {
-    background-image: url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800');
-}
-
-.service-consultation {
-    background-image: url('https://images.unsplash.com/photo-1454165833762-02c0022630ce?auto=format&fit=crop&q=80&w=800');
-}
-
 .card:hover {
     transform: translateY(-12px);
     box-shadow: 0 30px 60px rgba(10, 31, 68, 0.15);
@@ -448,6 +366,107 @@ section {
 
 .card p {
     color: var(--text-muted);
+}
+
+/* Service Card Premium Styles */
+.service-card {
+    min-height: 350px;
+    display: flex;
+    align-items: flex-end;
+    padding: 35px;
+    border: none !important;
+    position: relative;
+    z-index: 1;
+    background-color: #0F172A;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Background Layer for Zoom Effect */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Darker, Clearer Overlay for Maximum Readability */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            rgba(15, 23, 42, 1) 0%,
+            rgba(15, 23, 42, 0.7) 35%,
+            rgba(15, 23, 42, 0.1) 100%);
+    z-index: -1;
+    transition: background 0.4s ease;
+}
+
+.service-card:hover::before {
+    transform: scale(1.18);
+}
+
+.service-card:hover::after {
+    background: linear-gradient(to top,
+            rgba(30, 58, 138, 1) 0%,
+            rgba(30, 58, 138, 0.8) 40%,
+            rgba(30, 58, 138, 0.2) 100%);
+}
+
+.service-card h3 {
+    color: #FFFFFF !important;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+.service-card p {
+    color: #FFFFFF !important;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    opacity: 1 !important;
+}
+
+.service-student::before {
+    background-image: url('https://images.unsplash.com/photo-1523240751351-be406692330a?auto=format&fit=crop&q=90&w=1200');
+}
+
+.service-tourist::before {
+    background-image: url('https://images.unsplash.com/photo-1520264201913-2d5ef00b47ad?auto=format&fit=crop&q=90&w=1200');
+}
+
+.service-work::before {
+    background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c491?auto=format&fit=crop&q=90&w=1200');
+}
+
+.service-business::before {
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=90&w=1200');
+}
+
+.service-tour::before {
+    background-image: url('https://images.unsplash.com/photo-1506929113614-bb92850b3941?auto=format&fit=crop&q=90&w=1200');
+}
+
+.service-passport::before {
+    background-image: url('https://images.unsplash.com/photo-1593113598332-cd288d6444f1?auto=format&fit=crop&q=90&w=1200');
+}
+
+.service-consultation::before {
+    background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&q=90&w=1200');
 }
 
 /* Countries Flags */
