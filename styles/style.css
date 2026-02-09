@@ -11,7 +11,25 @@
     --font-heading: 'Poppins', sans-serif;
     --container-width: 1200px;
     --header-height: 80px;
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.review-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 20px !important;
+}
+
+.read-more-btn {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 25px;
 }
 
 * {
@@ -828,9 +846,14 @@ footer {
     }
 
     .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Keep 2x2 only for visual service cards */
+    #services-preview .grid,
+    .services-page .grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        /* Tighter gap for mobile grid */
     }
 
     .service-card {
@@ -842,6 +865,15 @@ footer {
     .service-card h3 {
         font-size: 1.1rem;
         margin-bottom: 0;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .review-text {
+        -webkit-line-clamp: 2;
+        /* Even shorter on mobile */
     }
 
     .service-card p {
