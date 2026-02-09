@@ -511,7 +511,9 @@ section {
     z-index: 1;
     overflow: hidden;
     color: var(--white);
-    background: transparent;
+    background-color: transparent !important;
+    /* Force transparent to see images beneath */
+    background-image: none !important;
 }
 
 .country-card::before {
@@ -523,7 +525,8 @@ section {
     height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: -2;
+    z-index: -1;
+    /* Move up slightly but stay behind after/overlay */
     transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
@@ -534,8 +537,10 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.7);
-    z-index: -1;
+    background: rgba(15, 23, 42, 0.8);
+    /* Slightly darker for better readability over flags */
+    z-index: 0;
+    /* Keep above image, below content */
     transition: background 0.4s ease;
 }
 
@@ -567,11 +572,24 @@ section {
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
 
+.country-code {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    opacity: 0.15;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
 .flag-icon {
     font-size: 3rem;
     margin-bottom: 15px;
     display: block;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
     transition: var(--transition);
 }
 
