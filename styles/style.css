@@ -3,7 +3,8 @@
     --white: #FFFFFF;
     --black: #000000;
     --gray-light: #F8FAFC;
-    --gray-border: #E2E8F0;
+    --gray-border: #CBD5E1;
+    /* Darker, more visible gray */
     --text-main: #1E293B;
     --text-muted: #64748B;
     --font-main: 'Inter', sans-serif;
@@ -301,7 +302,7 @@ section {
 .card {
     background: var(--white);
     padding: 45px 35px;
-    border: 1px solid var(--gray-border);
+    border: 2px solid var(--gray-border);
     border-radius: 16px;
     transition: var(--transition);
     position: relative;
@@ -368,7 +369,7 @@ section {
 }
 
 .country-card {
-    border: 1px solid var(--gray-border);
+    border: 2px solid var(--gray-border);
     padding: 30px 20px;
     text-align: center;
     border-radius: 12px;
@@ -407,7 +408,7 @@ section {
     margin: 0 auto;
     background: var(--white);
     padding: 60px;
-    border: 1px solid var(--gray-border);
+    border: 2px solid var(--gray-border);
     border-radius: 16px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
 }
@@ -604,11 +605,11 @@ footer {
 }
 
 .sidebar-nav ul li {
-    border-bottom: 1px solid var(--gray-border);
+    border-bottom: 2px solid var(--gray-border);
 }
 
 .sidebar-nav ul li:first-child {
-    border-top: 1px solid var(--gray-border);
+    border-top: 2px solid var(--gray-border);
 }
 
 .sidebar-nav ul li a {
