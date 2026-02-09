@@ -306,8 +306,98 @@ section {
     border-radius: 16px;
     transition: var(--transition);
     position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(10, 31, 68, 0.03);
+}
+
+.service-card {
+    min-height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.2) 100%);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.service-card:hover::before {
+    background: linear-gradient(to top, rgba(30, 58, 138, 0.98), rgba(30, 58, 138, 0.6));
+}
+
+/* Specific fix to hide the top bar accent on image cards */
+.service-card.card::before {
+    display: none;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.service-card h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service-student {
+    background-image: url('https://images.unsplash.com/photo-1523050853063-bd141c2da09b?auto=format&fit=crop&q=80&w=800');
+}
+
+.service-tourist {
+    background-image: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80&w=800');
+}
+
+.service-work {
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800');
+}
+
+.service-business {
+    background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800');
+}
+
+.service-tour {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800');
+}
+
+.service-passport {
+    background-image: url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800');
+}
+
+.service-consultation {
+    background-image: url('https://images.unsplash.com/photo-1454165833762-02c0022630ce?auto=format&fit=crop&q=80&w=800');
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(10, 31, 68, 0.15);
 }
 
 .card::before {
