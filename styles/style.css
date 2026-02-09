@@ -396,7 +396,7 @@ section {
     transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* Darker, Clearer Overlay for Maximum Readability */
+/* Darker, Clearer Overlay for Maximum Readability - Refined for better image visibility */
 .service-card::after {
     content: '';
     position: absolute;
@@ -405,10 +405,10 @@ section {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top,
-            rgba(15, 23, 42, 1) 0%,
-            rgba(15, 23, 42, 0.7) 35%,
-            rgba(15, 23, 42, 0.1) 100%);
-    z-index: -1;
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.2) 100%);
+    z-index: 0;
     transition: background 0.4s ease;
 }
 
@@ -418,9 +418,8 @@ section {
 
 .service-card:hover::after {
     background: linear-gradient(to top,
-            rgba(30, 58, 138, 1) 0%,
-            rgba(30, 58, 138, 0.8) 40%,
-            rgba(30, 58, 138, 0.2) 100%);
+            rgba(30, 58, 138, 0.9) 0%,
+            rgba(30, 58, 138, 0.5) 100%);
 }
 
 .service-card h3 {
@@ -428,7 +427,7 @@ section {
     margin-bottom: 12px;
     font-size: 1.8rem;
     font-weight: 800;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 1);
 }
 
 .service-card p {
@@ -437,37 +436,39 @@ section {
     line-height: 1.5;
     margin-bottom: 0;
     font-weight: 500;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
     opacity: 1 !important;
 }
 
+/* Specific Backgrounds with higher reliability URLs */
 .service-student::before {
-    background-image: url('https://images.unsplash.com/photo-1523240751351-be406692330a?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1541339907198-e087593c9fb0?auto=format&fit=crop&q=80&w=800');
 }
 
 .service-tourist::before {
-    background-image: url('https://images.unsplash.com/photo-1520264201913-2d5ef00b47ad?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&q=80&w=800');
 }
 
 .service-work::before {
-    background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c491?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800');
 }
 
 .service-business::before {
-    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800');
 }
 
 .service-tour::before {
-    background-image: url('https://images.unsplash.com/photo-1506929113614-bb92850b3941?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1506929113614-bb92850b3941?auto=format&fit=crop&q=80&w=800');
 }
 
 .service-passport::before {
-    background-image: url('https://images.unsplash.com/photo-1593113598332-cd288d6444f1?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800');
 }
 
 .service-consultation::before {
-    background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&q=90&w=1200');
+    background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800');
 }
+
 
 /* Countries Flags */
 .country-grid {
@@ -823,7 +824,23 @@ footer {
     }
 
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        /* Tighter gap for mobile grid */
+    }
+
+    .service-card {
+        min-height: 220px;
+        /* Shorter cards for 2x2 layout */
+        padding: 20px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
     }
 
     .country-grid {
