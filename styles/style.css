@@ -322,6 +322,8 @@ section {
     border: none;
     position: relative;
     z-index: 1;
+    background-color: #0F172A;
+    /* Fallback for when images don't load */
 }
 
 .service-card::before {
@@ -340,10 +342,7 @@ section {
     background: linear-gradient(to top, rgba(30, 58, 138, 0.98), rgba(30, 58, 138, 0.6));
 }
 
-/* Specific fix to hide the top bar accent on image cards */
-.service-card.card::before {
-    display: none;
-}
+
 
 .card-content {
     position: relative;
@@ -400,7 +399,7 @@ section {
     box-shadow: 0 30px 60px rgba(10, 31, 68, 0.15);
 }
 
-.card::before {
+.card:not(.service-card)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -419,7 +418,7 @@ section {
     box-shadow: 0 25px 50px rgba(10, 31, 68, 0.1);
 }
 
-.card:hover::before {
+.card:not(.service-card):hover::before {
     transform: scaleX(1);
 }
 
